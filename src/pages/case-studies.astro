@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CaseStudies from '../components/CaseStudies.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout title="Case Studies - Biomentis.ai">
+  <div class="page-header">
+    <div class="container">
+      <h1>Case Studies</h1>
+    </div>
+  </div>
+  
+  <CaseStudies />
+  
+  <section class="section">
+    <div class="container">
+      <h2>Our Success Stories</h2>
+      
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>
+              "Biomentis.ai helped us transform our idea into a fully functional MVP in record time. Their expertise and dedication were instrumental in the success of our product launch."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-name">John Smith</div>
+            <div class="author-title">CEO, TechStartup Inc.</div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>
+              "Working with Biomentis.ai was a game-changer for our business. Their team's technical expertise and innovative approach helped us create a product that exceeded our expectations."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-name">Sarah Johnson</div>
+            <div class="author-title">CTO, InnovateX</div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>
+              "The team at Biomentis.ai is exceptional. They not only delivered a high-quality product but also provided valuable insights and suggestions that improved our overall business strategy."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-name">Michael Brown</div>
+            <div class="author-title">Founder, DigitalSolutions</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-container">
+        <h2>Ready to Create Your Success Story?</h2>
+        <p>Contact us today to discuss your project and how we can help you achieve your goals.</p>
+        <Button href="/contact" variant="primary" size="large">Start Your Project</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--primary-color);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .testimonial {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testimonial-content {
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-content p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  
+  .testimonial-author {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+  }
+  
+  .author-name {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .author-title {
+    color: var(--text-color);
+    font-size: 0.875rem;
+  }
+  
+  .cta-container {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .cta-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .cta-container p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+</style>

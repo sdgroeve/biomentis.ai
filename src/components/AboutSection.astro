@@ -1,0 +1,173 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="about-section">
+  <div class="container">
+    <div class="about-badge">About biomentis.ai</div>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="about-title">
+          Transforming Ideas into 
+          <span class="highlight">Digital Reality</span>
+        </h2>
+        
+        <p class="about-description">
+          We are a team of passionate developers, designers, and digital strategists dedicated to helping businesses and entrepreneurs transform their ideas into successful digital products.
+        </p>
+        
+        <p class="about-description">
+          With our expertise in MVP development, custom applications, and UI/UX design, we provide end-to-end solutions that help our clients launch quickly and efficiently.
+        </p>
+        
+        <div class="about-cta">
+          <Button href="#services" variant="outline">Learn More About Our Services</Button>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <img src="/images/about-image.jpg" alt="Our team at work" />
+      </div>
+    </div>
+    
+    <div class="about-stats">
+      <div class="stat-card">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-value">24/7</div>
+        <div class="stat-label">Support Available</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-value">15+</div>
+        <div class="stat-label">Expert Developers Worldwide</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+  }
+
+  .about-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: center;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+  }
+
+  .highlight {
+    color: var(--primary-color);
+    display: block;
+  }
+
+  .about-description {
+    font-size: 1.125rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .about-cta {
+    margin-top: 2rem;
+  }
+
+  .about-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .stat-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: var(--text-color);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 992px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-image {
+      order: -1;
+    }
+
+    .about-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+    }
+
+    .about-description {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .about-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import Services from '../components/Services.astro';
+import CaseStudies from '../components/CaseStudies.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout title="Biomentis.ai - Transform Your Ideas into Digital Reality">
+  <HeroSection />
+  <section id="about">
+    <AboutSection />
+  </section>
+  <section id="services">
+    <Services />
+  </section>
+  <section id="case-studies">
+    <CaseStudies />
+  </section>
+  <section id="contact">
+    <ContactForm />
+  </section>
+</BaseLayout>

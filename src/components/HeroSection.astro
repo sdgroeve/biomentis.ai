@@ -1,0 +1,157 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        MVP Development & Tech Solutions
+      </div>
+      <h1 class="hero-title">
+        Transform Your Ideas into 
+        <span class="highlight">Digital Reality</span>
+      </h1>
+      <p class="hero-description">
+        We offer comprehensive development solutions to help you launch your MVP quickly and efficiently.
+      </p>
+      <div class="hero-buttons">
+        <Button href="#contact" variant="primary" size="large">Start Your Project</Button>
+        <Button href="#services" variant="outline" size="large">Explore Services</Button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-value">100+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Support Available</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">15+</div>
+          <div class="stat-label">Expert Developers Worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    padding: 6rem 0 4rem;
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+  }
+
+  .highlight {
+    color: var(--primary-color);
+    display: block;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .stat-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: var(--text-color);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 992px) {
+    .hero-title {
+      font-size: 2.75rem;
+    }
+
+    .hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 4rem 0 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

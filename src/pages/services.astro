@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Services from '../components/Services.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout title="Services - Biomentis.ai">
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Services</h1>
+    </div>
+  </div>
+  
+  <Services />
+  
+  <section class="section">
+    <div class="container">
+      <h2>Our Development Process</h2>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Discovery & Planning</h3>
+          <p>
+            We start by understanding your business goals, target audience, and project requirements. This helps us create a detailed roadmap for your project.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Design & Prototyping</h3>
+          <p>
+            Our designers create wireframes and interactive prototypes to visualize the user interface and experience before development begins.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Development</h3>
+          <p>
+            Our development team builds your product using modern technologies and best practices, ensuring high-quality code and optimal performance.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Testing & Quality Assurance</h3>
+          <p>
+            We thoroughly test your product to ensure it's bug-free, secure, and provides a seamless user experience across all devices.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h3>Deployment & Support</h3>
+          <p>
+            We deploy your product and provide ongoing support and maintenance to ensure it continues to perform optimally.
+          </p>
+        </div>
+      </div>
+      
+      <div class="cta-container">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Contact us today to discuss your project requirements and how we can help bring your ideas to life.</p>
+        <Button href="/contact" variant="primary" size="large">Contact Us</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--primary-color);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .process-step {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .step-number {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cta-container {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .cta-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .cta-container p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

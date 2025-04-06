@@ -1,0 +1,260 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="case-studies-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Innovation in Action</h2>
+      <p class="section-description">
+        Explore some of the successful projects we've delivered for our clients.
+      </p>
+    </div>
+
+    <div class="case-studies-grid">
+      <div class="case-study-card">
+        <div class="case-study-image">
+          <img src="/images/case-study-1.jpg" alt="Case Study 1" />
+        </div>
+        <div class="case-study-content">
+          <div class="case-study-tags">
+            <span class="tag">React</span>
+            <span class="tag">Electron</span>
+            <span class="tag">r3f</span>
+          </div>
+          <h3 class="case-study-title">3D Visualization Platform</h3>
+          <p class="case-study-description">
+            A powerful web-based 3D visualization tool for architects and designers to showcase their projects.
+          </p>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <div class="metric-value">-45%</div>
+              <div class="metric-label">Processing Time</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Mind Blowing</div>
+            </div>
+          </div>
+          <div class="case-study-cta">
+            <Button href="#contact" variant="outline">Contact Us</Button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-image">
+          <img src="/images/case-study-2.jpg" alt="Case Study 2" />
+        </div>
+        <div class="case-study-content">
+          <div class="case-study-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <h3 class="case-study-title">E-commerce Platform</h3>
+          <p class="case-study-description">
+            A scalable e-commerce solution with advanced analytics and personalized recommendations.
+          </p>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <div class="metric-value">76.5k</div>
+              <div class="metric-label">Impressions</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">-60%</div>
+              <div class="metric-label">Response Time</div>
+            </div>
+          </div>
+          <div class="case-study-cta">
+            <Button href="#contact" variant="outline">Contact Us</Button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-image">
+          <img src="/images/case-study-3.jpg" alt="Case Study 3" />
+        </div>
+        <div class="case-study-content">
+          <div class="case-study-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">GraphQL</span>
+          </div>
+          <h3 class="case-study-title">Health & Fitness App</h3>
+          <p class="case-study-description">
+            A comprehensive mobile app for tracking fitness goals, nutrition, and health metrics.
+          </p>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Satisfaction</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">143%</div>
+              <div class="metric-label">Redundancy Cut</div>
+            </div>
+          </div>
+          <div class="case-study-cta">
+            <Button href="#contact" variant="outline">Contact Us</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-studies-cta">
+      <Button href="#contact" variant="primary" size="large">Start Your Project</Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-studies-section {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+
+  .section-description {
+    font-size: 1.125rem;
+    color: var(--text-color);
+  }
+
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .case-study-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .case-study-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .case-study-image {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .case-study-card:hover .case-study-image img {
+    transform: scale(1.05);
+  }
+
+  .case-study-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-study-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    background-color: var(--light-bg);
+    color: var(--secondary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .case-study-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+
+  .case-study-description {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .case-study-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .metric {
+    background-color: var(--light-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+  }
+
+  .metric-label {
+    font-size: 0.875rem;
+    color: var(--text-color);
+  }
+
+  .case-study-cta {
+    margin-top: auto;
+  }
+
+  .case-studies-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 992px) {
+    .case-study-card {
+      grid-template-columns: 1fr;
+    }
+
+    .case-study-image {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .case-study-metrics {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
